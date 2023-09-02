@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Log parser</title>
+</head>
+
+<body>
+    <div id="console" class="center">
+        <div>
+            <label for="dateInput">Date:</label>
+            <input type="date" id="dateInput" onchange="filterConditionIsChanged()">
+        </div>
+        <div>
+            <label for="typeSelect">Type:</label>
+            <select id="typeSelect" onchange="filterConditionIsChanged()">
+                <option value="all">ALL</option>
+                <option value="info">INFO</option>
+                <option value="debug">DEBUG</option>
+                <option value="error">ERROR</option>
+            </select>
+        </div>
+        <div>
+            <label for="highlight">Highlight:</label>
+            <input type="text" id="highlight" onkeyup="highlightIsChanged()">
+        </div>
+    </div>
+    <table id="logTable">
+    </table>
+    <script src="app.js"></script>
+</body>
+
+</html>
